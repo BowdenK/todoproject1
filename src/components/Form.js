@@ -1,5 +1,6 @@
 import React from "react";
 import {useState} from 'react';
+import TodoList from "./TodoList";
 
 function Form(){
     const [newTask, setNewTask] = useState('')
@@ -55,24 +56,11 @@ function Form(){
                 </div>
             </form>
             <h1 className="title">Todo List</h1>
-            <ul className="list">
-                {todos.length === 0 && "Let's get to work"}
-                {todos.map(todo => {
-                    return <li key={todo.id}>
-                    <label>
-                        <input type="checkbox" 
-                        checked={todo.completed}
-                        onChange={(e) => toggleCheckbox(todo.id, e.target.checked)}
-                        />
-                        {todo.title}
-                    </label>
-                    <button 
-                        onClick={()=> removeTodo(todo.id)}
-                        className="btn-remove">Remove</button>
-                </li>
-                })}                
-            </ul>
-                        
+            <TodoList 
+                todos={todos} 
+                toggleCheckbox={toggleCheckbox}
+                removeTodo={removeTodo}
+            />            
         </>
     )
 }

@@ -1,4 +1,3 @@
-import Person from "./Person";
 import TodoList from "./components/TodoList";
 
 import Form from "./components/Form";
