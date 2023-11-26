@@ -1,14 +1,12 @@
 import Person from "./Person";
-import TodoForm from "./components/TododForm";
+import TodoList from "./components/TodoList";
+
+import Form from "./components/Form";
 
 const App = () => {
   return (
     <div>
-      <h1>My Site</h1>
-      <h1>My Sitedfdfbdb</h1>
-      <h1>hdhdhdhd</h1>
-      <Person />
-      <TodoForm />
+      <Form />
     </div>
   )
 }
